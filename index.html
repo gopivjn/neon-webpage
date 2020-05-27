@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"><link rel="stylesheet" href="./css/style.css">  
+<title>Neon Effects</title>
+</head>
+<body>
+  <div class="main-container">
+    <div class="top">
+    <h2>Welcome to</h2>
+    <hr class="line">
+    </div>
+    <div class="middle">
+      <a href="#" onclick="typeWriter()"><span></span><span></span><span></span><span></span>
+        elSpectra
+      </a>
+    </div>
+    <div class="bottom">
+    <p id="demo"></p>
+    </div>
+  </div>
+  <script>
+    var i = 0;
+    var txt = 'Dream. Design. Create...';
+    var speed = 200;
+
+    function typeWriter() {
+      if (i < txt.length) {
+        document.getElementById("demo").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+  </script>
+  
+</body>
+</html>
